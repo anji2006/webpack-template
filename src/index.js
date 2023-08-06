@@ -1,9 +1,8 @@
-import getDetails from './tempFunction'
+import React from 'react';
 
-console.log(getDetails())
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-console.log('Hiii! Pottiii I Like You......')
-console.log('this is test the crating Bunlde files again')
-
-console.log('rrrrrr')
-const name = 'anji'
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<App />);

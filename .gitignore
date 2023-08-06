@@ -1,2 +1,5 @@
+### Need not to maintain Node_modules as we can genarate with npm insatll
 node_modules
+
+### Need not to maintain dist as we can Genarate with npm run dist 
 dist
