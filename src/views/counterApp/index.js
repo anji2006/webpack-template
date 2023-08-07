@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {increment, decrement, randomIncrement} from '../../redux/counterSlice';
+import React, {useState} from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import {increment, decrement, randomIncrement} from '../../redux/counterSlice'
 
 const Counter = () => {
-  const count = useSelector((store) => store.counter);
+  const count = useSelector(store => store.counter)
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   return (
     <div>
@@ -17,7 +17,7 @@ const Counter = () => {
         Randomly Increment
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter

@@ -1,18 +1,18 @@
-import React from 'react';
-import Counter from './views/counterApp';
-import {Provider} from 'react-redux';
+import React from 'react'
+import Counter from './views/counterApp'
+import {Provider} from 'react-redux'
 
-import store from './redux/store';
+import store from './redux/store'
 
-const App = () => {
+function App() {
   return (
     <div>
-      <div>this is Application</div>
+      <div>this is what</div>
       <Provider store={store}>
         <Counter />
       </Provider>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
