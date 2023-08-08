@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {increment, decrement, randomIncrement} from '../../redux/counterSlice'
 
@@ -6,6 +6,12 @@ const Counter = () => {
   const count = useSelector(store => store.counter)
 
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    if (count >= 5) {
+      throw new Error('this is new Error')
+    }
+  })
 
   return (
     <div>
