@@ -1,40 +1,28 @@
 import React from 'react'
-import Counter from './views/counterApp'
 import {Provider} from 'react-redux'
 
 import store from './redux/store'
-import ErrorBoundary from './components/ErrorBoundary'
-import CounterA from './views/counterApp/CounterA'
+import Auth from './HOC/Authontication'
+import Header from './layout/header/Header'
+import Footer from './layout/footer/Footer'
+import {Outlet, useNavigation} from 'react-router-dom'
 
 function App() {
+  const navigation = useNavigation()
+
   return (
-    <div>
-      <Provider store={store}>
-        <CounterA />
-        <CounterA />
-        <CounterA />
-        <CounterA />
-        <CounterA />
-        <ErrorBoundary
-          fallback={
-            <div>
-              this is fallback
-              <button
-                type="button"
-                onClick={() => console.log('this is fallback button')}
-              >
-                click on fallback
-              </button>
-            </div>
-          }
-        >
-          <Counter />
-        </ErrorBoundary>
-        <CounterA />
-        <CounterA />
-        <CounterA />
-      </Provider>
-    </div>
+    <Provider store={store}>
+      <Header />
+      <div
+        style={{
+          border: '2px solid red',
+          height: '100vh',
+        }}
+      >
+        <Outlet />
+      </div>
+      <Footer />
+    </Provider>
   )
 }
 

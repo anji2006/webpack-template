@@ -1,0 +1,20 @@
+.root-error-main-box {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.root-error-box {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.error-msg {
+  color: red;
+  font-weight: 800;
+}
