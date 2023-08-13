@@ -17,7 +17,7 @@
       }
     }
   ],
-  "semi": false,
+  "semi": true,
   "trailingComma": "all",
   "useTabs": false
 }

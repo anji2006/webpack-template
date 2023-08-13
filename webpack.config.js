@@ -12,6 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
+    publicPath: '/',
     clean: true,
     assetModuleFilename: '[name][ext]',
   },
@@ -47,7 +48,7 @@ module.exports = {
         },
       },
       {
-        test: /\$.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ],

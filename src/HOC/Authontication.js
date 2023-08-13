@@ -1,9 +1,14 @@
-import React from 'react'
+import Cookies from 'js-cookie';
+import React from 'react';
+import {Navigate, useNavigate} from 'react-router-dom';
 
 const Auth = WrapperComponent => props => {
-  const token = localStorage.getItem('token')
-  if (token) return <WrapperComponent {...props} />
-  return <div> this login Page</div>
-}
+  const navigate = useNavigate();
 
-export default Auth
+  const token = Cookies.get('token');
+
+  if (token) return <WrapperComponent {...props} />;
+  return <Navigate to="/login" />;
+};
+
+export default Auth;

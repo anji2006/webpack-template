@@ -1,0 +1,24 @@
+.header-box {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-box .logo-box {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+}
+  
+.header-box .nav-box ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style-type: none;
+}
+.header-box .profile-box {
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+}
